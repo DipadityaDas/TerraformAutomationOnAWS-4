@@ -1,5 +1,5 @@
 resource "aws_security_group" "tfdbSG" {
-	name        = "MySQLSG"
+	name        = "mariadbSG"
 	description = "Allow mysql and all outbound traffic to Database EC2 Instance."
 	vpc_id      = aws_vpc.tfvpc.id
 
@@ -27,7 +27,7 @@ resource "aws_security_group" "tfdbSG" {
 	}
 
 	tags = {
-		Name = "Tf-mysqlSG"
+		Name = "Tf-mariadbSG"
 	}
 	
 	depends_on = [

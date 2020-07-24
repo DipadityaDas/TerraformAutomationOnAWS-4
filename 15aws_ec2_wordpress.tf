@@ -13,6 +13,6 @@ resource "aws_instance" "tfwordpress" {
 	}
 	
 	depends_on = [
-		aws_instance.tfmysql
+		aws_instance.tfsql
 	]
 }

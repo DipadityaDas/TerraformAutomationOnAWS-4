@@ -10,3 +10,7 @@ resource "null_resource" "runwebpage"  {
 output "Wordpress_public_ip" {
 	value = aws_instance.tfwordpress.public_ip
 }
+
+output "MariaDB_private_ip" {
+	value = aws_instance.tfsql.private_ip
+}

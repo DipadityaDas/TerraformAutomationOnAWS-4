@@ -10,7 +10,7 @@ resource "null_resource" "ip_update" {
   // To update new ip
   provisioner "remote-exec" {
     inline = [
-      "sudo sed -i 's/172.31.44.165/${aws_instance.tfmysql.private_ip}/g' /var/www/html/wp-config.php",
+      "sudo sed -i 's/172.31.44.165/${aws_instance.tfsql.private_ip}/g' /var/www/html/wp-config.php",
     ]
   }
 

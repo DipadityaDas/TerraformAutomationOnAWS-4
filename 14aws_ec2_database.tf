@@ -1,4 +1,4 @@
-resource "aws_instance" "tfmysql" {
+resource "aws_instance" "tfsql" {
 	ami           = "ami-0b1cf2d31713ad4cd"
 	instance_type = "t2.micro"
 	key_name 	  = aws_key_pair.deployer.key_name
@@ -9,7 +9,7 @@ resource "aws_instance" "tfmysql" {
 	]
 	
 	tags = {
-		Name = "MySQL"
+		Name = "MariaDB"
 	}
 	
 	depends_on = [
