@@ -8,7 +8,7 @@ resource "null_resource" "key_update" {
 
   provisioner "file" {
     source = "./Tfkey.pem"
-	destination = "/home/ec2-user/"
+    destination = "/home/ec2-user/Tfkey.pem"
   }
 
   depends_on = [
