@@ -6,3 +6,7 @@ resource "null_resource" "runwebpage"  {
 		null_resource.ip_update
 	]
 }
+
+output "Wordpress_public_ip" {
+		value = aws_instance.tfwordpress.public_ip
+	}
